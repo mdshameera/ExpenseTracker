@@ -1,0 +1,397 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+:root {
+	--box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+h2 {
+	text-align: center;
+	font-size: 2rem;
+	font-weight: bold;
+	margin: 20px 0;
+}
+
+body {
+	background: #f8c4dd;
+	background: linear-gradient(135deg, #f8c4dd, #22b787);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	min-height: 100vh;
+	margin: 0;
+	padding: 5px;
+	font-family: "Lato", sans-serif;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.container {
+	width: 100%;
+	max-width: 350px; /* keeps it readable on large screens */
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.maincontainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+	flex-wrap: wrap;
+	padding: 20px;
+	max-width: 100%;
+}
+
+.imageclass {
+	width: 450px;
+	max-width: 100%;
+	height: auto;
+	transition: width 0.3s ease;
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+	.imageclass {
+		width: 250px;
+	}
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+	.imageclass {
+		display: none; /* hide image */
+	}
+	.maincontainer {
+		flex-direction: column;
+		align-items: center;
+		gap: 20px;
+	}
+}
+
+.Footer {
+	text-align: center;
+	padding: 8px 0;
+	margin: 0;
+	border: none;
+	outline: none;
+}
+
+.Footer h3 {
+	font-size: 0.8rem;
+	font-weight: normal;
+	margin: 0;
+	border: none;
+}
+
+h1 {
+	letter-spacing: 1px;
+	margin: 0;
+}
+
+h3 {
+	border-bottom: 1px solid #bbb;
+	padding-bottom: 10px;
+	margin: 40px 0 10px;
+}
+
+h4 {
+	margin: 0;
+	text-transform: uppercase;
+}
+
+.inc-exp-container {
+	background-color: #fff;
+	box-shadow: var(--box-shadow);
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	margin: 20px 0;
+}
+
+.inc-exp-container > div {
+	flex: 1;
+	text-align: center;
+}
+
+.inc-exp-container > div:first-of-type {
+	border-right: 1px solid #dedede;
+}
+
+.money {
+	font-size: 20px;
+	letter-spacing: 1px;
+	margin: 5px 0;
+}
+
+.money.plus {
+	color: #2ecc71;
+}
+
+.money.minus {
+	color: #c0392b;
+}
+
+label {
+	display: inline-block;
+	margin: 10px 0;
+}
+
+input[type="text"],
+input[type="number"] {
+	padding: 0.75rem;
+	border-radius: 7px;
+	width: 100%;
+	border: 1px solid #9ca3af; /* gray-400 */
+	color: #89a0cd; /* gray-500 */
+	font-weight: 500;
+}
+
+
+.btn {
+	cursor: pointer;
+	background-color: #9c88ff;
+	box-shadow: var(--box-shadow);
+	color: #fff;
+	border: 0;
+	display: block;
+	font-size: 16px;
+	margin: 10px 0 30px;
+	padding: 10px;
+	width: 100%;
+
+}
+
+.btn:focus,
+.list {
+	list-style-type: none;
+	padding: 10px;
+	margin-bottom: 40px;
+}
+
+.list li {
+	background-color: #fff;
+	box-shadow: var(--box-shadow);
+	color: #333;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	padding: 10px;
+	margin: 10px 0;
+	flex-direction: row;
+	word-break: break-word;
+}
+
+.list li.plus {
+	border-right: 5px solid #2ecc71;
+}
+
+.list li.minus {
+	border-right: 5px solid #c0392b;
+}
+
+.delete-btn {
+	cursor: pointer;
+	background-color: #e74c3c;
+	border: 0;
+	color: #fff;
+	font-size: 16px;
+	line-height: 16px;
+	padding: 4px 8px;
+	position: absolute;
+	top: 20%;
+	left: -10%;
+	opacity: 1; /* always visible */
+}
+
+.list li:hover .delete-btn {
+	opacity: 1;
+}
+
+/* Container */
+.login-container {
+	display: flex;
+	justify-content: center;
+	min-height: 80vh;
+}
+
+/* Form */
+.login-form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* Title */
+.login-title {
+	font-size: 2rem;
+	font-family: "Lora", serif;
+	font-weight: 600;
+	color: #4b5563; /* gray-700 */
+	margin-top: 10rem;
+	margin-bottom: 2.5rem;
+}
+
+/* Input wrapper */
+.form-group {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 0.75rem; /* space between fields */
+}
+
+.input-wrapper {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+}
+
+.input-field {
+	padding: 0.75rem;
+	border-radius: 7px;
+	width: 100%;
+	border: 1px solid #9ca3af; /* gray-400 */
+	color: #89a0cd; /* gray-500 */
+	font-weight: 500;
+}
+.input-field:focus {
+	outline: none; /* yellow-400 */
+}
+
+/* Confirm password validation states */
+.input-field.focus-valid:focus {
+	border-color: #facc15; /* yellow-400 */
+	box-shadow: 0 0 0 1px #facc15;
+}
+
+.input-field.focus-invalid:focus {
+	border-color: #ef4444; /* red-500 */
+	box-shadow: 0 0 0 1px #ef4444;
+}
+
+.input-field:hover {
+	border-color: #facc15;
+}
+
+/* Icons */
+.icon {
+	width: 1.75rem;
+	height: 1.75rem;
+}
+
+/* Toggle password */
+.toggle-password {
+	cursor: pointer;
+}
+
+/* Error */
+.error-message {
+	color: #ef4444; /* red-500 */
+	font-size: 0.875rem;
+	margin-top: 0.5rem;
+}
+
+/* Footer */
+.form-footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.5rem;
+	margin-top: 1.25rem;
+}
+
+/* Button */
+.submit-btn {
+	border: none; /* yellow-400 */
+	padding: 0.75rem 1.25rem;
+	border-radius: 10px;
+	font-weight: 600;
+	transition: all 0.2s;
+}
+
+.submit-btn:hover {
+	background-color: rgb(105, 105, 129);
+	color: white;
+	cursor: pointer;
+}
+
+.submit-btn.disabled {
+	background-color: #d1d5db; /* gray-300 */
+	color: #6b7280; /* gray-500 */
+	cursor: not-allowed;
+}
+
+/* Signup link */
+.signup-link {
+	font-size: 0.875rem;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	gap: 0.25rem;
+}
+
+.signup-link p {
+	color: #161718; /* gray-400 */
+}
+
+.signup-link a {
+	color: #6b7280; /* gray-500 */
+	text-decoration: underline;
+}
+
+/* Wrapper for profile icon */
+.profile-popup-wrapper {
+	position: relative;
+	cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Icon */
+.profile-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Popup menu */
+.profile-popup-menu {
+	position: absolute;
+	right: 0;
+	margin-top: 0.5rem;
+	width: 10rem;
+	background-color: #fff;
+	box-shadow: var(--box-shadow);
+	border-radius: 0.5rem;
+	z-index: 50;
+	transform-origin: top;
+	transition: transform 0.2s ease;
+}
+
+/* Individual item */
+.profile-popup-item {
+	display: flex;
+	align-items: center;
+	padding: 0.5rem 0.5rem;
+  border-radius: 5px;
+	gap: 0.5rem;
+	cursor: pointer;
+}
+
+.profile-popup-menu :hover{
+  background: #d2d2d2;
+}
+
+/* Name text */
+.profile-popup-name {
+	font-weight: 600;
+	margin: 0;
+}
+
+/* Logout button */
+.profile-popup-item.logout {
+	color: #ef4444; /* red-500 for logout */
+}
