@@ -10,7 +10,7 @@ dotenv.config({ path: "./config/config.env" });
 connectDB();
 
 const transactions = require("./routes/transactions");
-const protect = require("./middleware/authmiddleware");
+const protect = require("./middleware/authMiddleware");
 const auth = require("./routes/auth");
 
 const app = express();
